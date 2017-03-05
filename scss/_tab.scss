@@ -1,0 +1,61 @@
+$count: 120;
+.right-btn{
+  color:white;
+  font-size:30rem/$count;
+  //line-height:30rem/$count;
+  //height:30rem/$count;
+  padding:15rem/$count 25rem/$count;
+}
+
+.forbid{
+  color: #B3BFF6;
+}
+.ion-ios-arrow-back {
+  color: #b31e00 !important;
+
+}
+.data-icon-off{
+  background:url("../img/index/index_off.png");
+}
+.hr-icon-off{
+  background:url("../img/index/messages.png");
+}
+.service-icon-off{
+  background:url("../img/index/contact.png");
+}
+.manage-icon-off{
+  background:url("../img/index/my.png");
+}.me-icon-off{
+   background:url("../img/index/my.png");
+ }
+.data-icon-on{
+  background:url("../img/index/index.png");
+}
+.hr-icon-on{
+  background:url("../img/index/messages_on.png");
+}
+.service-icon-on{
+  background:url("../img/index/contact_on.png");
+}
+.manage-icon-on{
+  background:url("../img/index/me_on.png");
+}
+.me-icon-on{
+  background:url("../img/index/me_on.png");
+}
+.unite{
+  background-size:55rem/$count 55rem/$count;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+.tab-title{
+  //color:#898e91;
+  font-size: 26rem/$count;
+}
+
+ion-tabs.tabs-color-active-positive .tab-item{
+  color:#a8a7a7;
+}
+ion-tabs.tabs-color-active-positive .tab-item.tab-item-active{
+  color:#658ddd;
+}
