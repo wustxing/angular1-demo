@@ -66,12 +66,26 @@ gulp.task('minify-html', function () {
 //压缩图片
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant'); //png图片压缩插件
-
+var imageminJpegtran = require('imagemin-jpegtran');
 gulp.task('pngimg', function () {
+    var jpgmin = imageminJpegtran({
+            accurate: false,//高精度模式
+            quality: "low",//图像质量:low, medium, high and veryhigh;
+            method: "smallfry",//网格优化:mpe, ssim, ms-ssim and smallfry;
+            min: 70,//最低质量
+            loops: 0,//循环尝试次数, 默认为6;
+            progressive: false,//基线优化
+            subsample: "default"//子采样:default, disable;
+        }),
+
+
+        pngmin = pngquant({
+            optimizationLevel: 4
+        });
     return gulp.src('img/index/*')
         .pipe(imagemin({
             progressive: true,
-            use: [pngquant()] //使用pngquant来压缩png图片
+            use: [jpgmin,pngmin] //使用pngquant来压缩png图片
         }))
         .pipe(gulp.dest('done/'));
 });
